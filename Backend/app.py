@@ -10,12 +10,16 @@ import hashlib
 import time
 from duckduckgo_search import DDGS
 
+
+
+app = Flask(__name__)
+
 @app.route("/",methods=["GET"])
 def home():
+
     return{"status":"API Active"}
-    
-app = Flask(__name__)
 CORS(app)
+
 
 cache = {}
 RESULTS_CACHE = {}
